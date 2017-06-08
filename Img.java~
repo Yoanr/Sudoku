@@ -1,0 +1,17 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Img extends JComponent {
+    private Image sudoke;
+    public Img() {
+	super();
+	sudoke = Toolkit.getDefaultToolkit().getImage("sudoke.jpg");
+    }
+    @Override
+    public void paintComponent(Graphics pinceau) {
+	Graphics secondPinceau = pinceau.create();
+
+	
+secondPinceau.drawImage(this.sudoke,0 ,0,this.getWidth(),this.getHeight(), this);
+    }
+}
